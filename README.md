@@ -1,70 +1,66 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Crowd Funding
 
-## Available Scripts
+This is a simple decenterlized application (Dapp) built on Goerli testnet in which a person could create a project for which he need the funding and withdraw the money.
 
-In the project directory, you can run:
+In this Multiple projects can be made and multiple donars can donate to any project they are willing to.
 
-### `npm start`
+If no project exists or no donars exists and user tries to access it forcefully by puting wrong index it would give invalid index error.
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- ### Create Project
+A person could create project for which he needs the funding by setting the name and amount needed with help og create button 
+- ### Get the funds collected
+The owner of a particular project could withdraw the money collected from donars only if they are allowed by the donors using request button in Get Funding card
+- ### Donate to project
+Anyone who is willing to contribute to any project can be done so by using donate button by entring the address of the project he/she willing to contribute and amount
+- ### Allow the owner of project
+Allow button will be used by donars to allow the specific project owner to spend the funding collected  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ### Get project details
+A particular owner could check the projects created by him with help of Get Project 
 
-### `npm test`
+- ### Get donor details
+All the donors could be get by using Get donars
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ### List donar of particular project
+Donors of particular project could be get by using Show Donars
 
-### `npm run build`
+- ### Withdraw donar
+If at certain moment donar feels to withdraw his contribution it could be done by using withdraw button
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Demo
 
-### `npm run eject`
+https://crowdfunding-mu.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech Stack
+The frontend is built using React
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+On the Web3 side, the contract is written in Solidity and compiled and deployed. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For interaction with frontend ether.js library is used
+## Limitations
 
-## Learn More
+- The most prominent limitation of this Crowd Funding system is that it's proper functioning is heavily dependent on how it's going to be interacted with. The buttons are not turned off (i.e. made un-clickable) at any moment. So, if a participant decides to just go ahead and randomly start clicking the buttons in between transactions, the application is mostly likely going to report an error or even worse, it may crash. Therefore, patiently wait for the transaction to complete and the updates to appear on screen
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- If user tries to access any project or donar which doesnot exists or has been closed, he will get alert message saying Invalid Index!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Creator of project would not be able to donate to its own project
 
-### Code Splitting
+- User could only withdraw his contribution before the project is closed means once the target amount of particular project is reached donar would not be able to withdraw his money
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Only the owner of project would be able to get the money means any other project's owner will not be able to get money of another project
 
-### Analyzing the Bundle Size
+- Onwer would get money only if target is reached else not
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The contract is manually tested using Remix IDE.
 
-### Making a Progressive Web App
+ 
+## What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- How to create Multiple projects and map particular donors to that specific project
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
