@@ -63,4 +63,9 @@ For interaction with frontend ether.js library is used
 
 - How to create Multiple projects and map particular donors to that specific project
 
+## 🔗 Connect with me
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shubham-garg-6232181b8/)
+
+
+
 
